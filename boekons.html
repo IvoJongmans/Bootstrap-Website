@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Boekingsformulier</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+        
+<div style="height:50px">
+
+</div>
+
+  <div class="container">
+        <div class="col-sm-12 text-center">
+                <img src="logonav.png" alt="#" style="padding-bottom:25px;">
+        </div>
+      <p class="col-sm-12"><b>Uw gegevens:</b></p>
+      <form action="send_boekingsformulier.php" method="post"> 
+            <div class="form-group col-sm-6">
+                <label for="naam">Naam:</label>
+                <input type="text" class="form-control" name="naam" id="naam" required>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" name="email" id="email">
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="straat">Straat:</label>
+                <input type="text" class="form-control" name="straat" id="straat">
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="huisnummer">Huisnummer:</label>
+                <input type="text" class="form-control" name="huisnummer" id="huisnummer">
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="postcode">Postcode:</label>
+                <input type="text" class="form-control" name="postcode" id="postcode">
+            </div>
+            <div class="form-group col-sm-6">
+                    <label for="plaats">Plaats:</label>
+                    <input type="text" class="form-control" name="plaats" id="plaats">
+            </div>
+            <div class="form-group col-sm-12">
+                    <label for="telefoon">Telefoonnummer:</label>
+                    <input type="text" class="form-control" name="telefoon" id="telefoon">
+            </div>    
+
+            <p class="col-sm-12"><b>Locatiegegevens:</b></p>
+
+            <div class="form-group col-sm-4">
+                    <label for="naam_locatie">Naam locatie:</label>
+                    <input type="text" class="form-control" name="naam_locatie" id="naam_locatie">
+            </div>
+            <div class="form-group col-sm-4">
+                    <label for="straat_locatie">Straat:</label>
+                    <input type="text" class="form-control" name="straat_locatie" id="straat_locatie">
+            </div>
+            <div class="form-group col-sm-4">
+                    <label for="huisnummer_locatie">Huisnummer:</label>
+                    <input type="text" class="form-control" name="huisnummer_locatie" id="huisnummer_locatie">
+            </div>
+            <div class="form-group col-sm-4">
+                    <label for="postcode_locatie">Postcode:</label>
+                    <input type="text" class="form-control" name="postcode_locatie" id="postcode_locatie">
+            </div>
+            <div class="form-group col-sm-4">
+                    <label for="plaats_locatie">Plaats:</label>
+                    <input type="text" class="form-control" name="plaats_locatie" id="plaats_locatie">
+            </div>
+            <div class="form-group col-sm-4">
+                    <label for="telefoonnummer_locatie">Telefoonnummer:</label>
+                    <input type="text" class="form-control" name="telefoonnummer_locatie" id="telefoonnummer_locatie">
+            </div>
+            <div class="form-group col-sm-4">
+                    <label for="datum_locatie">Datum:</label>
+                    <input type="text" class="form-control" name="datum_locatie" id="datum_locatie">
+            </div>
+            <div class="form-group col-sm-4">
+                    <label for="begintijd_locatie">Begintijd:</label>
+                    <input type="text" class="form-control" name="begintijd_locatie" id="begintijd_locatie">
+            </div>
+            <div class="form-group col-sm-4">
+                    <label for="eindtijd_locatie">Eindtijd:</label>
+                    <input type="text" class="form-control" name="eindtijd_locatie" id="eindtijd_locatie">
+            </div>
+            <div class="form-group col-sm-6">
+                    <label for="personen_locatie">Aantal Personen:</label>
+                    <input type="text" class="form-control" name="personen_locatie" id="personen_locatie"> 
+            </div>
+            <div class="form-group col-sm-6">
+                    <label for="soort_locatie">Soort Feest:</label>
+                    <input type="text" class="form-control" name="soort_locatie" id="soort_locatie"> 
+            </div>
+
+            <p class="col-sm-12"><b>Bereikbaarheid locatie:</b></p>
+
+            <div class="form-group checkbox col-sm-6">
+                    <label><input type="checkbox" name="check_list[]" value="Niet op de begane grond.">Het feest is niet op de begane grond.
+                    </label>
+            </div>
+            <div class="form-group checkbox col-sm-6">
+                    <label><input type="checkbox" name="check_list[]" value="Niet op BG / Geen lift.">Het feest is niet op de begane grond en er is geen lift.
+                    </label>
+            </div>
+            <div class="form-group checkbox col-sm-6">
+                    <label><input type="checkbox" name="check_list[]" value="Verder dan 25 meter.">De laad- en loslocatie is verder dan 25 meter verwijderd van de plaats waar we mogen draaien.
+                    </label>
+            </div>
+            <div class="form-group checkbox col-sm-6">
+                    <label><input type="checkbox" name="check_list[]" value="Geen verharde weg.">Er loopt geen verharde weg naar de laad- en loslocatie.
+                    </label>
+            </div>
+            <div class="form-group checkbox col-sm-6">
+                    <label><input type="checkbox" name="check_list[]" value="Geen verharde weg draailocatie.">Er loopt geen verharde weg van de laad- en loslocatie naar de plek waar we mogen draaien.
+                    </label>
+            </div>
+            <div class="form-group checkbox col-sm-6">
+                    <label><input type="checkbox" name="check_list[]" value="Er zijn smaller doorgangen.">Er zijn smalle doorgangen op de route naar waar we mogen draaien.
+                    </label>
+            </div>
+            <div class="form-group checkbox col-sm-6">
+                    <label><input type="checkbox" name="check_list[]" value="Stroomgroep beschikbaar.">Er is niet minimaal één vrije stroomgroep beschikbaar.
+                    </label>
+            </div>
+            <div class="form-group checkbox col-sm-6">
+                    <label><input type="checkbox" name="check_list[]" value="Geen gratis parkeren.">Er is bij de locatie geen gratis parkeerplek voor een auto met aanhanger.
+                    </label>
+            </div>
+            <div class="form-group col-sm-12">
+                    <label for="toelichting">Toelichting op het bovenstaande:</label>
+                    <textarea class="form-control" rows="5" name="toelichting" id="toelichting"></textarea>
+            </div>
+
+            <p class="col-sm-12"><b>Gewenste Artiesten</b></p>
+
+            <div class="form-group checkbox col-sm-6">
+                        <label><input type="checkbox" name="artist_list[]" value="DJ" checked>DJ
+                        </label>
+                </div>
+                <div class="form-group checkbox col-sm-6">
+                        <label><input type="checkbox" name="artist_list[]" value="Sax">Sax
+                        </label>
+                </div>
+                <div class="form-group checkbox col-sm-6">
+                        <label><input type="checkbox" name="artist_list[]" value="MC">MC
+                        </label>
+                </div>
+                <div class="form-group checkbox col-sm-6">
+                        <label><input type="checkbox" name="artist_list[]" value="Zangeres">Zangeres
+                        </label>
+                </div>
+
+            <p class="col-sm-12"><b>Benodigde apparatuur</b></p>
+
+            <div class="form-group radio col-sm-4">
+                <label><input type="radio" name="apparatuur" value="Licht- en geluidshow" checked>Licht- en geluidshow</label>
+              </div>
+              <div class="form-group radio col-sm-4">
+                <label><input type="radio" name="apparatuur" value="Alleen lichtshow">Alleen lichtshow</label>
+              </div>
+              <div class="form-group radio col-sm-4">
+                <label><input type="radio" name="apparatuur" value="Alleen geluidshow">Alleen geluidshow</label>
+              </div>
+              <div class="form-group col-sm-12">
+                      <input class="form-control" type="text" name="extra_apparatuur" placeholder="Eventuele extra apparatuur">
+              </div>
+              <div class="form-group col-sm-12">
+                <textarea class="form-control" rows="5" name="opbouwen" placeholder="Kunnen we direct beginnen met opbouwen?"></textarea>
+              </div>
+
+              <p class="col-sm-12"><b>Uw Feest en Muziek</b></p>
+
+              <div class="form-group col-sm-12">
+                <textarea class="form-control" rows="5" name="perfecte_avond" placeholder="Vertel ons over uw perfecte avond.."></textarea>
+              </div>
+              <div class="form-group col-sm-12">
+                <textarea class="form-control" rows="5" name="indeling_avond" placeholder="Hoe ziet de avond eruit.."></textarea>
+              </div>
+              <div class="form-group col-sm-12">
+                
+                <input type="text" class="form-control" name="gewenste_muziek" placeholder="Gewenste muziek..">
+            </div>
+            <div class="form-group col-sm-12">
+                
+                <input type="text" class="form-control" name="ongewenste_muziek" placeholder="Ongewenste muziek..">
+            </div>
+
+            <div class="form-group col-sm-12">
+                <textarea class="form-control" rows="5" name="openingsnummer" placeholder="Welke plaat wilt u als openingsdans?"></textarea>
+              </div>
+              <div class="form-group col-sm-12">
+                <textarea class="form-control" rows="5" name="aansluitingen" placeholder="Hier kunt u aangeven of u uw eigen muziek wil aansluiten."></textarea>
+              </div>
+
+              <p class="col-sm-12"><b>Wat is uw favoriete top 10 (artiest + nummer)?</b></p>
+
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer1" placeholder="1.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer2" placeholder="2.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer3" placeholder="3.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer4" placeholder="4.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer5" placeholder="5.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer6" placeholder="6.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer7" placeholder="7.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer8" placeholder="8.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer9" placeholder="9.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer10" placeholder="10.">
+              </div>
+
+             <div class="form-group col-sm-12">
+                <button class="btn btn-primary" type="submit"><b>Verstuur!</b></button>
+            </div>
+      </form>
+  </div>
+     
+      
+
+    
+ 
+</body>
+</html>

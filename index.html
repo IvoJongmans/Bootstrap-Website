@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>DJ PAPE & RUIG</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+
+  
+        <img id="logo" class="centered" src="logofade.png" alt="DJ PAPE & RUIG Logo">
+  
+      
+  <script>
+    var img = document.getElementById("logo");
+    var opa = 1;
+    int = setInterval(opacity, 30);
+    
+    function opacity() {
+        if (opa <= 1 && opa >=0) {
+        img.style.opacity = opa;
+        opa -= 0.01;
+        }
+        else {
+            clearInterval(int);
+            window.location.href = 'home.html';
+        }
+    }
+      
+  </script>
+
+  </body>
+
+</html>
